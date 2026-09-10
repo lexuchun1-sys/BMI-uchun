@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator - Uchun</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="calculator-card">
+            <h1>BMI Calculator</h1>
+            <p class="subtitle">Calculate your Body Mass Index</p>
+            
+            <div class="input-group">
+                <label for="weight">Weight (kg)</label>
+                <input type="number" id="weight" placeholder="Enter your weight" min="1" step="0.1">
+            </div>
+            
+            <div class="input-group">
+                <label for="height">Height (cm)</label>
+                <input type="number" id="height" placeholder="Enter your height" min="1" step="0.1">
+            </div>
+            
+            <button id="calculateBtn" class="calculate-btn">Calculate BMI</button>
+            <button id="resetBtn" class="reset-btn">Reset</button>
+            
+            <div id="result" class="result hidden">
+                <div class="result-value">
+                    <h2>Your BMI</h2>
+                    <p id="bmiValue" class="bmi-number">0</p>
+                </div>
+                <div class="result-category">
+                    <p id="bmiCategory" class="category-text"></p>
+                    <p id="bmiDescription" class="description-text"></p>
+                </div>
+            </div>
+            
+            <div class="bmi-chart">
+                <h3>BMI Categories</h3>
+                <div class="chart-item underweight">
+                    <span class="chart-label">Underweight</span>
+                    <span class="chart-range">&lt; 18.5</span>
+                </div>
+                <div class="chart-item normal">
+                    <span class="chart-label">Normal weight</span>
+                    <span class="chart-range">18.5 - 24.9</span>
+                </div>
+                <div class="chart-item overweight">
+                    <span class="chart-label">Overweight</span>
+                    <span class="chart-range">25 - 29.9</span>
+                </div>
+                <div class="chart-item obese">
+                    <span class="chart-label">Obese</span>
+                    <span class="chart-range">&ge; 30</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
